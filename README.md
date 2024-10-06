@@ -1,29 +1,5 @@
-# .
+[Vue.js] 코딩 자율학습 Vue.js 프론트엔드 개발 입문서 스터디
+학습기한 24.10.06 ~ 24.12.06 (예정)
+주말, 공휴일 위주로 스터디 계획중
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+학습일지 블로그 https://pakms980319.tistory.com/293
