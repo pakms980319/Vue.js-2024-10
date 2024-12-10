@@ -8,13 +8,20 @@
                 },
             },
         },
+        emits: ['delete-todo', 'update-todo', 'edit-todo'],
         methods: {
             deleteTodo(id) {
                 this.$emit('delete-todo', id);
             },
             updateTodo(id) {
                 this.$emit('update-todo', id)
-            }
+            },
+            editTodo(id) {
+                const newMsg = prompt('새로운 할 일을 입력하세요: ');
+                if(newMsg) {
+                    this.$emit('edit-todo', id, newMsg);
+                }
+            },
         },
     }
 </script>
@@ -36,7 +43,7 @@
             :for="`chk${item.id.toString()}`"
             class="todo__checkbox-label"></label>
 
-          <span class="todo__item-text">{{ item.msg }}</span>
+          <span class="todo__item-text" @dblclick="editTodo(item.id)">{{ item.msg }}</span>
 
           <span class="material-symbols-outlined todo__delete-icon"
                 @click="deleteTodo(item.id)">
