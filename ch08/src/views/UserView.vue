@@ -19,8 +19,10 @@
     onBeforeMount(() => {
         const name = route.query.name;
         const age = route.query.age;
+        const id = route.params.id;
         console.log(name);
         console.log(age);
+        console.log(`params id : ${id}`);
     });
 </script>
 <template>

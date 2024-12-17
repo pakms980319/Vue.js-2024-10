@@ -3,6 +3,8 @@
     const route = useRoute();
     const id = route.params.id;  // 한 번에 useRoute().params.id 라고 작성해도 된다
     console.log(id);
+    // Composition API - 이름있는 라우터 이동 (쿼리 스트링, 파람 전달)
+    route.replace({name:'', query: {}, params: {}});
 </script>
 <template>
     <h1>id: {{ id }}</h1>
