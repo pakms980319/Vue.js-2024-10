@@ -54,7 +54,7 @@ const router = createRouter({
             component: () => import('../views/AboutView.vue'),
         },
         {
-            path: '/user',
+            path: '/user/:id',
             name: 'user',
             components: {
                 header: () => import('../views/TheHeader.vue'),
@@ -72,7 +72,8 @@ const router = createRouter({
                     name: 'user-profile',
                     component: () => import('../views/UserProfile.vue'),
                 },
-            ]
+            ],
+            props: {header: true, default: false, footer: false},
         },
     ]
 });
