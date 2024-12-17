@@ -55,7 +55,12 @@ const router = createRouter({
         },
         {
             path: '/user',
-            component: () => import('../views/UserView.vue'),
+            name: 'user',
+            components: {
+                header: () => import('../views/TheHeader.vue'),
+                default: () => import('../views/UserView.vue'),
+                footer: () => import('../views/TheFooter.vue'),
+            },
             children: [
                 {
                     path: 'info',

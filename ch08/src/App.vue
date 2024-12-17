@@ -3,9 +3,8 @@
 </script>
 <template>
   <nav>
-    <RouterLink to="/">home</RouterLink>
-    <RouterLink to="/about">about</RouterLink>
-    <RouterLink to="/user">user</RouterLink>
+    <RouterView name="header" />
     <RouterView />
+    <RouterView name="footer" />
   </nav>
 </template>
