@@ -10,6 +10,11 @@ const router = createRouter({
             path: "",
             name: "Home",
             component: HomeView,
+            beforeEnter: (to, from, next) => {
+                console.log("beforeEnter");
+                console.log(to, from);
+                next();
+            },
         },
         {
             path: "/about",
@@ -50,5 +55,12 @@ const router = createRouter({
         }
     ]
 });
+
+// 라우트 전환 전
+// router.beforeEach((to, from, next) => {
+//     console.log(to, from);
+//     if(to.fullPath !== '/about')
+//         next();
+// });
 
 export default router;

@@ -1,10 +1,19 @@
 <script setup>
-import { useRouter } from 'vue-router';
+import { onBeforeRouteLeave, onBeforeRouteUpdate, useRouter } from 'vue-router';
 
     const router = useRouter();
     const pushRouter = () => {
         router.push('/');
     }
+
+    onBeforeRouteUpdate((to, from) => {
+        console.log('onBeforeRouteUpdate');
+        console.log(to, from);
+    });
+    onBeforeRouteLeave((to, from) => {
+        console.log('onBeforeRouteLeave');
+        console.log(to, from);
+    });
 </script>
 <template>
     <h1>AboutView</h1>
